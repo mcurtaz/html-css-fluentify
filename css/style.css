@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+/* clearfix */
+header nav::after, .row::after, .piano{
+  content: "";
+  display: table;
+  clear: both;
+}
 /* classe ad hoc per il rientro di contenuti verso destra */
 
 .rientro{
@@ -30,12 +36,6 @@ header nav{
   height: 80px;
 }
 
-/* clearfix */
-header nav::after{
-  content: "";
-  display: table;
-  clear: both;
-}
 
 header nav li{
   display: inline-block;
@@ -127,11 +127,15 @@ nav .buttons{
  transform: translate(-50%, -50%);
 }
 
-/* riche di contenuti a blocchetti */
+/* righe di contenuti a blocchetti */
 
+/* riga 1 */
 .row{
-  margin-top: 40px;
+  padding-top: 40px;
+  margin-bottom: 40px;
 }
+
+
 .blocchetto{
   float: left;
   width: 33%;
@@ -145,7 +149,7 @@ nav .buttons{
   margin-bottom: 15px;
 }
 
-.blocchetto h4{
+.blocchetto h4, .blocchettor2 h4{
   font-size: 24px;
   font-weight: bold;
   color: green;
@@ -156,4 +160,77 @@ nav .buttons{
   width: 30%;
   border-bottom: 1px solid black;
   margin: 20px auto;
+}
+
+/* riga 2 */
+
+.row:nth-child(3){
+  border-top: 1px solid lightgrey;
+}
+
+.row .blocchettor2{
+  width: 50%;
+  float: left;
+}
+
+.row .blocchettor2 [alt="scopri"]{
+  width: 100%;
+}
+
+.row .blocchettor2 {
+  padding: 0 20px;
+}
+
+.row .blocchettor2 p{
+  margin-bottom: 15px;
+}
+
+.row .blocchettor2 h4{
+  color: black;
+}
+
+/* barra sotto */
+.piano{
+  width: 100%;
+  height: 120px;
+  background: lightgrey;
+}
+
+.piano h3{
+  float: left;
+  display: inline-block;
+  line-height: 120px;
+  width: 20%;
+}
+.piano .visualizza{
+  float: left;
+  display: inline-block;
+  text-align: right;
+  width: 80%;
+  line-height: 120px;
+}
+.piano [type="button"]{
+  padding: 8px;
+  background-color: green;
+  border-radius: 4px;
+}
+
+.piano select{
+  margin-left: 8px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid grey;
+}
+
+.bottoni{
+  margin-left: 20px;
+  display: inline-block;
+  position: relative;
+}
+
+.bottoni [value="HELP"]{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
 }
