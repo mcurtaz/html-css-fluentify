@@ -38,17 +38,17 @@ header nav::after{
 }
 
 header nav li{
-  float: left;
+  display: inline-block;
   line-height: 80px;
-  margin: 0 5px;
+  margin: 0 10px;
   list-style: none;
 }
 
 header nav ul{
   text-align: center;
   float: left;
-  width: 400px;
-  margin-left: 10px;
+  width: 500px;
+  margin-left: 30px;
 }
 
 nav .buttons{
@@ -60,6 +60,7 @@ nav .buttons{
 .buttons *{
   font-size: 12px;
   margin: 0 10px;
+  color: white;
 }
 
 .buttons a{
@@ -103,4 +104,56 @@ nav .buttons{
   padding: 10px;
   background-color: green;
   border-radius: 4px;
+}
+
+/* parte centrale */
+
+/* titolino con sfondo grigio */
+.main-titolo{
+  height: 100px;
+  text-align: center;
+  background-color: lightgrey;
+  position: relative;
+}
+
+.main-titolo h3{
+  margin-bottom: 5px;
+}
+
+.main-titolo > div{
+ position: absolute;
+ left: 50%;
+ top: 50%;
+ transform: translate(-50%, -50%);
+}
+
+/* riche di contenuti a blocchetti */
+
+.row{
+  margin-top: 40px;
+}
+.blocchetto{
+  float: left;
+  width: 33%;
+  text-align: center;
+  padding: 10px;
+
+}
+
+.blocchetto > img{
+  height: 150px;
+  margin-bottom: 15px;
+}
+
+.blocchetto h4{
+  font-size: 24px;
+  font-weight: bold;
+  color: green;
+  margin-bottom: 20px;
+}
+
+.blocchetto .righina{
+  width: 30%;
+  border-bottom: 1px solid black;
+  margin: 20px auto;
 }
